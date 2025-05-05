@@ -861,7 +861,67 @@
     "isAsync": false
   },
   {
+    "functionName": "acir_prove_ultra_keccak_zk_honk",
+    "inArgs": [
+      {
+        "name": "acir_vec",
+        "type": "const uint8_t *"
+      },
+      {
+        "name": "witness_vec",
+        "type": "const uint8_t *"
+      }
+    ],
+    "outArgs": [
+      {
+        "name": "out",
+        "type": "uint8_t **"
+      }
+    ],
+    "isAsync": false
+  },
+  {
     "functionName": "acir_verify_ultra_honk",
+    "inArgs": [
+      {
+        "name": "proof_buf",
+        "type": "const uint8_t *"
+      },
+      {
+        "name": "vk_buf",
+        "type": "const uint8_t *"
+      }
+    ],
+    "outArgs": [
+      {
+        "name": "result",
+        "type": "bool *"
+      }
+    ],
+    "isAsync": false
+  },
+  {
+    "functionName": "acir_verify_ultra_keccak_honk",
+    "inArgs": [
+      {
+        "name": "proof_buf",
+        "type": "const uint8_t *"
+      },
+      {
+        "name": "vk_buf",
+        "type": "const uint8_t *"
+      }
+    ],
+    "outArgs": [
+      {
+        "name": "result",
+        "type": "bool *"
+      }
+    ],
+    "isAsync": false
+  },
+  {
+    "functionName": "acir_verify_ultra_keccak_zk_honk",
     "inArgs": [
       {
         "name": "proof_buf",
@@ -890,6 +950,22 @@
       {
         "name": "recursive",
         "type": "const bool *"
+      }
+    ],
+    "outArgs": [
+      {
+        "name": "out",
+        "type": "uint8_t **"
+      }
+    ],
+    "isAsync": false
+  },
+  {
+    "functionName": "acir_write_vk_ultra_keccak_zk_honk",
+    "inArgs": [
+      {
+        "name": "acir_vec",
+        "type": "const uint8_t *"
       }
     ],
     "outArgs": [

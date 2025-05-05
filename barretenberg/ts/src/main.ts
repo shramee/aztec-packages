@@ -435,6 +435,8 @@ export async function proveUltraHonk(
 
     const acirProveUltraHonk = options?.keccak
       ? api.acirProveUltraKeccakHonk.bind(api)
+      : options?.keccakZK
+      ? api.acirProveUltraKeccakZKHonk.bind(api)
       : api.acirProveUltraHonk.bind(api);
     const proof = await acirProveUltraHonk(bytecode, witness);
 
@@ -463,6 +465,8 @@ export async function writeVkUltraHonk(
 
     const acirWriteVkUltraHonk = options?.keccak
       ? api.acirWriteVkUltraKeccakHonk.bind(api)
+      : options?.keccakZK
+      ? api.acirWriteVkUltraKeccakZKHonk.bind(api)
       : api.acirWriteVkUltraHonk.bind(api);
     const vk = await acirWriteVkUltraHonk(bytecode);
 
@@ -488,6 +492,8 @@ export async function verifyUltraHonk(
   try {
     const acirVerifyUltraHonk = options?.keccak
       ? api.acirVerifyUltraKeccakHonk.bind(api)
+      : options?.keccakZK
+      ? api.acirVerifyUltraKeccakZKHonk.bind(api)
       : api.acirVerifyUltraHonk.bind(api);
     const verified = await acirVerifyUltraHonk(
       Uint8Array.from(readFileSync(proofPath)),
